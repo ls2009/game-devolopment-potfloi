@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whack-a-Mole</title>
+	<style>
+		.container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 10px;
+			margin: 50px auto;
+			width: 600px;
+		}
+
+		.hole {
+			background: #8b4513;
+			border-radius: 50%;
+			height: 150px;
+			position: relative;
+			overflow: hidden;
+			width: 150px;
+		}
+
+		.mole {
+			background: #000;
+			border-radius: 50%;
+			height: 100px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: all 0.3s ease;
+			width: 100px;
+		}
+
+		.mole.up {
+			top: -50px;
+		}
+
+		.mole.whacked {
+			background: #fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Whack-a-Mole</h1>
+	<p>Score: <span id="score">0</span></p>
+	<div class="container">
+		<div class="hole" id="hole1"><div class="mole"></div></div>
+		<div class="hole" id="hole2"><div class="mole"></div></div>
+		<div class="hole" id="hole3"><div class="mole"></div></div>
+		<div class="hole" id="hole4"><div class="mole"></div></div>
+		<div class="hole" id="hole5"><div class="mole"></div></div>
+		<div class="hole" id="hole6"><div class="mole"></div></div>
+		<div class="hole" id="hole7"><div class="mole"></div></div>
+		<div class="hole" id="hole8"><div class="mole"></div></div>
+		<div class="hole" id="hole9"><div class="mole"></div></div>
+	</div>
+
+	<script src="game.js"></script>
+</body>
+</html>
